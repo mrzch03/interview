@@ -6,8 +6,8 @@ import openai
 # 设置你的 OpenAI 密钥
 openai.api_key = os.getenv("API_KEY")
 st.header("虚拟面试官")
-st.subheader( "根据您上传的简历来帮您分析您的优势")
-st.subheader( "同时为您提供专业的面试题，来模拟面试")
+st.subheader( "根据上传的简历来分析您的优势")
+st.subheader( "同时为您提供面试题，来模拟面试")
 
 def read_pdf(file):
     with pdfplumber.open(file) as pdf:
