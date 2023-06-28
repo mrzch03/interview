@@ -46,14 +46,14 @@ if uploaded_file is not None and not st.session_state.summarized:
     with st.spinner('正在读取PDF...'):
 
         st.session_state.text = read_pdf(uploaded_file)
-    with st.spinner('正在分析你的优势和一些建议...'):
+    with st.spinner('正在挖掘你简历里的闪光点和提供一些优化建议...'):
         st.session_state.summary = summarize_text(st.session_state.text)
         st.session_state.summarized = True
         st.write( st.session_state.summary)
         # 添加一个按钮
 if st.session_state.summarized:
-    if st.button('我是面试官，我来问你几个问题吧'):
+    if st.button('我是"虚拟面试官"，我会提出一些实战面试题目!'):
         st.write("")
-        with st.spinner('正在生成面试问题...'):
+        with st.spinner('正在准备实战题目...'):
             st.session_state.summary = summarize_question(st.session_state.text)
         st.write(st.session_state.summary)
