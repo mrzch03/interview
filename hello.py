@@ -18,7 +18,7 @@ def read_pdf(file):
 
 def summarize_text(text):
     messages = [
-            {"role": "system", "content": "你现在来辅助帮助用户优化简历，要求总结出用户简历中的优势，和你认为可以优化的内容，语言干练简洁"},
+            {"role": "system", "content": "你现在来辅助帮助用户发现用户简历中的优势，和你认为可以优化的内容，语言干练简洁"},
             {"role": "user", "content": text},
         ]
     response = openai.ChatCompletion.create(
