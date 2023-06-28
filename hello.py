@@ -52,7 +52,7 @@ if uploaded_file is not None and not st.session_state.summarized:
         st.write( st.session_state.summary)
         # 添加一个按钮
 if st.session_state.summarized:
-    if st.button('我是"虚拟面试官"，我会提出一些实战面试题目!'):
+    if st.button('我是面试官，我来提出几个问题吧！'):
         st.write("")
         with st.spinner('正在准备实战题目...'):
             st.session_state.summary = summarize_question(st.session_state.text)
