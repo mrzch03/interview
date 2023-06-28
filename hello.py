@@ -46,7 +46,7 @@ if uploaded_file is not None and not st.session_state.summarized:
     with st.spinner('正在读取PDF...'):
 
         st.session_state.text = read_pdf(uploaded_file)
-    with st.spinner('正在挖掘你简历里的闪光点和提供一些优化建议...'):
+    with st.spinner('正在挖掘你简历里的闪光点并提供一些优化建议...'):
         st.session_state.summary = summarize_text(st.session_state.text)
         st.session_state.summarized = True
         st.write( st.session_state.summary)
